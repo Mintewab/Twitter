@@ -14,7 +14,7 @@ app.post("/api/new", function(req,res){
     Tweet.create({
         author: req.body.author,
         body: req.body.body,
-        created_at: req.body.created_at
+        createdAt: req.body.createdAt
 
     }).then(function(results){
 

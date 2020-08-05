@@ -2,14 +2,12 @@
 $("#tweet-submit").on("click", function(event) {
     event.preventDefault();
   
-
     var newTweet = {
       author: $("#author").val().trim(),
       body: $("#tweet-box").val().trim(),
-      created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+      createdAt: moment().format("YYYY-MM-DD HH:mm:ss")
     };
   
-    console.log(newTweet);
   
   
     $.post("/api/new", newTweet)
@@ -21,9 +19,10 @@ $("#tweet-submit").on("click", function(event) {
   
         row.append("<p>" + newTweet.author + " tweeted: </p>");
         row.append("<p>" + newTweet.body + "</p>");
-        row.append("<p>At " + moment(newTweet.created_at).format("h:mma on dddd") + "</p>");
+        row.append("<p>At " + moment(newTweet.createdAt).format("h:mma on dddd") + "</p>");
   
         $("#tweet-area").prepend(row);
+        
   
       });
   
@@ -44,9 +43,10 @@ $("#tweet-submit").on("click", function(event) {
   
         row.append("<p>" + data[i].author + " tweeted.. </p>");
         row.append("<p>" + data[i].body + "</p>");
-        row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+        row.append("<p>At " + moment(data[i].createdAt).format("h:mma on dddd") + "</p>");
   
         $("#tweet-area").prepend(row);
+        
   
       }
   

@@ -36,7 +36,22 @@
     font-size: 16px;
   }
   
-  #tweet-area{
+  /* #tweet-area{
     background-color: antiquewhite;
-       
-  }
+    border-style: dotted dashed solid double;
+  
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    grid-gap: 10px;
+    
+    } */
+
+    .tweet{
+      background-color: whitesmoke;
+      /* border-style: dotted dashed solid double; */
+      
+      grid-template: 200px / auto auto auto;
+      
+      /* background-color: #2196F3; */
+      padding: 30px;
+    }

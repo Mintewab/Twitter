@@ -1,13 +1,13 @@
 var  Sequelize = require("sequelize")
 
-var sequelize = require("../config/connnection.js")
+var sequelize = require("../config/connection")
 
 
 
 var Tweet = sequelize.define("tweet", {
     author: Sequelize.STRING, 
     body: Sequelize.STRING,
-    created_at: Sequelize.DATE
+    createdAt: Sequelize.DATE
 })
 
 Tweet.sync()
